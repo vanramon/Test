@@ -1,0 +1,12 @@
+.navContainer{
+    background-color: rgb(173, 173, 173);
+    padding: 10px;
+    max-height: 55px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    margin: 5px;
+}
