@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 export default function MainPage() {
   return (
@@ -7,5 +8,6 @@ export default function MainPage() {
         <h3>Для доступа к информации вторизируйтесь!</h3>
         <button type='button'>Авторизаци</button>
     </div>
+
   )
 }

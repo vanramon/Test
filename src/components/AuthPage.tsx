@@ -13,7 +13,7 @@ export default function AuthPage() {
                 Password
                 <input type="password" />
             </label>
-            <button type='submit'></button>
+            <button type='submit'>Авторизироватся</button>
         </form>
     </div>
   )
