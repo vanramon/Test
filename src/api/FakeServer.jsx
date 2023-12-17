@@ -1,3 +1,13 @@
+import { data } from '../data/data.js'
+
+export const FakeData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(data);
+    }, 2000);
+  });
+};
+
 export const FakeLogin = (username, password) => {
     return new Promise((resolve, reject) => {
         setTimeout (() => {
