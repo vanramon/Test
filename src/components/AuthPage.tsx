@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useStore } from "../store/Store";
-import { FakeLogin } from "../api/FakeLogin";
+import { FakeLogin } from "../api/FakeServer";
 
 
 export const AuthPage = () => {
