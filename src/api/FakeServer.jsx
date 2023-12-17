@@ -1,4 +1,4 @@
-import { data } from '../data/data.js'
+import { data } from '../data/data.js';
 
 export const FakeData = () => {
   return new Promise((resolve, reject) => {
@@ -9,13 +9,13 @@ export const FakeData = () => {
 };
 
 export const FakeLogin = (username, password) => {
-    return new Promise((resolve, reject) => {
-        setTimeout (() => {
-            if(username === 'admin' && password === 'password') {
-                resolve({succes: true})
-            }else {
-                reject(new Error('Invalid credentials'));
-            }
-        }, 2000)
-        }
-)};
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (username === 'admin' && password === 'password') {
+        resolve({ succes: true });
+      } else {
+        reject(new Error('Invalid credentials'));
+      }
+    }, 2000);
+  });
+};

@@ -1,13 +1,5 @@
-import { FakeData } from "../api/FakeServer";
+import React from 'react';
 
-export function BrowsePage() {
-  
-  FakeData().then(() => {
-    console.log(data);
-    
-  })
-
-  return (
-    <div>Данные</div>
-  )
-}
+export const BrowsePage = () => {
+  return <div>Данные!</div>;
+};
