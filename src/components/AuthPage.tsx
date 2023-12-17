@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import { useStore } from "../store/Store";
-import { FakeLogin } from "../api/FakeServer";
-
+import { useStore } from '../store/Store';
+import { FakeLogin } from '../api/FakeServer';
 
 export const AuthPage = () => {
   const { username, password, isLoggedIn, setUsername, setPassword, setIsLoggedIn } = useStore();
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
 
   const handleLogin = () => {
     setIsLoading(true);
@@ -20,9 +18,8 @@ export const AuthPage = () => {
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('username', username);
         localStorage.setItem('password', password);
-      
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Authentication failed:', error);
         setError(error.message);
       })
@@ -49,19 +46,11 @@ export const AuthPage = () => {
         <div>
           <div>
             Username:
-            <input
-              type="text"
-              value={username}
-              onChange={e => setUsername(e.target.value)}
-            />
+            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
           </div>
           <div>
             Password:
-            <input
-              type="password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-            />
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           {error && <div>{error}</div>}
           <button onClick={handleLogin} disabled={isLoading}>
@@ -72,4 +61,3 @@ export const AuthPage = () => {
     </div>
   );
 };
-
