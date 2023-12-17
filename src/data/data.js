@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     key: '_',
     name: 'root',
