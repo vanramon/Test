@@ -1,12 +1,12 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-export default function MainPage() {
+export function MainPage() {
+
   return (
     <div>
         <h1>Главная страница</h1>
         <h3>Для доступа к информации вторизируйтесь!</h3>
-        <button type='button'>Авторизаци</button>
+        <Link to={'/login'}><button>Авторизиция</button></Link>
     </div>
 
   )

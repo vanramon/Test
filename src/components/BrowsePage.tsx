@@ -1,6 +1,5 @@
-import React from 'react'
-
-export default function BrowsePage() {
+export function BrowsePage() {
+  
   return (
     <div>Данные</div>
   )
