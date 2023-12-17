@@ -8,6 +8,5 @@ export function MainPage() {
         <h3>Для доступа к информации вторизируйтесь!</h3>
         <Link to={'/login'}><button>Авторизиция</button></Link>
     </div>
-
   )
 }

@@ -11,6 +11,5 @@ export const Layout:FC<PropsWithChildren> = (props) => {
       <Navbar /> 
      {children}
   </Fragment>
-
  )
 } 
