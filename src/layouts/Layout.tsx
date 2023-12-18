@@ -1,8 +1,8 @@
-import React from 'react';
 import { FC, Fragment, PropsWithChildren } from 'react';
-import { Navbar } from './Navbar';
 
-export const Layout: FC<PropsWithChildren> = (props) => {
+import { Navbar } from '../components/Navbar';
+
+export const AppLayout: FC<PropsWithChildren> = (props) => {
   const { children } = props;
 
   return (
