@@ -28,7 +28,9 @@ export const Navbar = () => {
               </Link>
             </div>
             <div className="authBtn">
-              <button onClick={handleLogout}>Выйти</button>
+            <Link to="/">
+            <button onClick={handleLogout}>Выйти</button>
+              </Link>
             </div>
           </Fragment>
         ) : (
@@ -40,7 +42,7 @@ export const Navbar = () => {
             </div>
             <div className="authBtn">
               <Link to="/login">
-                <button>Авторизиция</button>
+                <button>Авторизация</button>
               </Link>
             </div>
           </Fragment>

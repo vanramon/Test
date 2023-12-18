@@ -1,5 +1,3 @@
-import './App.css';
-
 import { AppLayout } from './layouts/Layout';
 import { Navigation } from './routing/Navigation';
 

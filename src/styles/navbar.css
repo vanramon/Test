@@ -1,14 +1,31 @@
 .navContainer {
-  background-color: rgb(173, 173, 173);
+  background-color: #3498db;
   padding: 10px;
-  max-height: 55px;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-button {
-  margin: 5px;
+.navBtn button,
+.authBtn button {
+  margin-right: 10px;
+  padding: 8px;
+  background-color: #fff;
+  color: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navBtn button:hover,
+.authBtn button:hover {
+  background-color: #ecf0f1;
+}
+
+.authBtn button {
+  background-color: #e74c3c;
+  color: #fff;
 }

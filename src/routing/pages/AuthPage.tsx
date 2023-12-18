@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { TOKEN_LS_KEY, useAuthStore } from '../../store/auth.store';
 import { login } from '../../api/auth.api';
 import { useNavigate } from 'react-router-dom';
+import '../../styles/auth.css'
 
 export const AuthPage = () => {
   const { setIsAuth } = useAuthStore();
@@ -33,21 +34,33 @@ export const AuthPage = () => {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          Username:
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        </div>
-        <div>
-          Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </div>
-        {error && <div>{error}</div>}
-        <button disabled={isLogging} onClick={handleLogin}>
-          {isLogging ? 'Logging in...' : 'Login'}
-        </button>
+    <div className="auth-container">
+      <div className="input-group">
+        <label className="input-label">Username:</label>
+        <input
+          className="input-field"
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
       </div>
+      <div className="input-group">
+        <label className="input-label">Password:</label>
+        <input
+          className="input-field"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      {error && <div className="error-message">{error}</div>}
+      <button
+        className="login-button"
+        disabled={isLogging}
+        onClick={handleLogin}
+      >
+        {isLogging ? 'Logging in...' : 'Login'}
+      </button>
     </div>
   );
 };

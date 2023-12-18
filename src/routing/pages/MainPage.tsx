@@ -1,14 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import '../../styles/main.css'
 
-export function MainPage() {
+export const MainPage = () => {
   return (
-    <div>
-      <h1>Главная страница</h1>
-      <h3>Для доступа к информации вторизируйтесь!</h3>
-      <Link to={'/login'}>
-        <button>Авторизиция</button>
-      </Link>
+    <div className="main-page-container">
+      <h1 className="main-heading">Главная страница</h1>
+      <h3 className="info-message">Для доступа к информации авторизуйтесь!</h3>
     </div>
   );
 }
