@@ -1,23 +1,12 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-
 import './App.css';
 
-import { MainPage } from './components/MainPage';
-import { BrowsePage } from './components/BrowsePage';
-import { AuthPage } from './components/AuthPage';
-import { Layout } from './components/Layout';
+import { AppLayout } from './layouts/Layout';
+import { Navigation } from './routing/Navigation';
 
-function App() {
+export const App = () => {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/browse" element={<BrowsePage />} />
-        <Route path="/login" element={<AuthPage />} />
-      </Routes>
-    </Layout>
+    <AppLayout>
+      <Navigation />
+    </AppLayout>
   );
-}
-
-export default App;
+};
